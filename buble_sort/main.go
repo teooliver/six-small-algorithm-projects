@@ -68,9 +68,7 @@ func bubbleSort(slice []int) {
 		swapped = false
 		for i := 1; i < n; i++ {
 			if slice[i-1] > slice[i] {
-				temp := slice[i-1]
-				slice[i-1] = slice[i]
-				slice[i] = temp
+				slice[i-1], slice[i] = slice[i], slice[i-1]
 				swapped = true
 			}
 		}
